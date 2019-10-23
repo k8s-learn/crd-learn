@@ -1,0 +1,13 @@
+apiVersion: bolingcavalry.k8s.io/v1
+kind: Student
+metadata:
+  name: object-student
+spec:
+  name: wky
+  school: changpingyizhong
+  size: 2
+  image: nginx:1.7.9
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30002
