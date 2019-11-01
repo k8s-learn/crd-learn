@@ -178,18 +178,6 @@ func (c *Controller) syncHandler(key string) error {
 	glog.Infof("实际状态是从业务层面得到的，此处应该去的实际状态，与期望状态做对比，并根据差异做出响应(新增或者删除)")
 	glog.V(3).Infof("新建student spec 中的Name和School分别为：%s,%s",student.Spec.Name,student.Spec.School)
 
-	deploymentName := student.Spec.Name
-	if deploymentName == "" {
-		utilruntime.HandleError(
-			fmt.Errorf("%s: deployment name must be specified",key))
-		return nil
-	}
-	deployment, err := c.
-
-
-
-
-
 
 
 	c.recorder.Event(student, corev1.EventTypeNormal, SuccessSynced, MessageResourceSynced)
